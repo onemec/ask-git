@@ -1,0 +1,15 @@
+[project]
+name = "ask-git"
+version = "0.1.0"
+description = "Ask an LLM about a Git repo"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "chromadb>=0.6.3",
+    "gitpython>=3.1.44",
+    "langchain-chroma>=0.2.1",
+    "langchain-community>=0.3.17",
+    "langchain-ollama>=0.2.3",
+    "langchain-text-splitters>=0.3.6",
+    "typer>=0.15.1",
+]
