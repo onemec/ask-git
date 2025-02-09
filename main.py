@@ -96,15 +96,17 @@ def load_repo(git_repo: str, git_branch: str):
 
 
 @app.command()
-def ask(question: str):
+def ask():
     """
     Asks a question to the LLM and prints the response.
 
     Displays a spinner while the LLM processes the question.
 
-    :param question: The question to ask the LLM
     :return: None
     """
+    question = typer.prompt(
+        "What do you want to ask the LLM about the repo?"
+    )
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}"),
